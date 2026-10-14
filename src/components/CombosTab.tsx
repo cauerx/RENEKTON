@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { MechanicsData } from '../types/guide';
+import { getAssetUrl } from '../utils/assets';
 import { Zap, Play, ChevronDown, ChevronUp, Swords, Layers } from 'lucide-react';
 
 interface CombosTabProps {
@@ -61,10 +62,10 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
 
           <div className="rounded-xl overflow-hidden border border-[#1b2b3d] bg-[#070b10]">
             <img
-              src="/extracted_media/image42.png"
+              src={getAssetUrl('/extracted_media/image42.png')}
               alt="Lane Trading Combos"
               className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-              onClick={() => window.open('/extracted_media/image42.png', '_blank')}
+              onClick={() => window.open(getAssetUrl('/extracted_media/image42.png'), '_blank')}
             />
           </div>
           <p className="text-xs text-[#94a3b8] leading-relaxed">
@@ -86,10 +87,10 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
 
           <div className="rounded-xl overflow-hidden border border-[#1b2b3d] bg-[#070b10]">
             <img
-              src="/extracted_media/image37.png"
+              src={getAssetUrl('/extracted_media/image37.png')}
               alt="All-In Combos"
               className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-              onClick={() => window.open('/extracted_media/image37.png', '_blank')}
+              onClick={() => window.open(getAssetUrl('/extracted_media/image37.png'), '_blank')}
             />
           </div>
           <p className="text-xs text-[#94a3b8] leading-relaxed">
@@ -125,7 +126,7 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
           {expandedSection === 'auto-cancels' && (
             <div className="p-4 sm:p-6 space-y-4 border-t border-[#172535] bg-[#090f17]">
               <div className="max-w-md mx-auto rounded-xl overflow-hidden border border-[#233549]">
-                <img src="/extracted_media/image25.png" alt="AA Cancels" className="w-full h-auto object-contain" />
+                <img src={getAssetUrl('/extracted_media/image25.png')} alt="AA Cancels" className="w-full h-auto object-contain" />
               </div>
               <pre className="text-xs sm:text-sm text-[#cbd5e1] font-mono whitespace-pre-wrap leading-relaxed bg-[#0d1622] p-4 rounded-xl border border-[#1d2d3e]">
                 {mechanics.sections[0]?.content}
@@ -156,17 +157,17 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-sm text-[#f0e6d2]">Ravenous Hydra</h5>
-                  <img src="/extracted_media/image34.png" alt="Ravenous Hydra" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image34.png')} alt="Ravenous Hydra" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Ravenous &gt; AA (cancela animação com clique direito) / Ravenous &gt; Q</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-sm text-[#f0e6d2]">Stridebreaker</h5>
-                  <img src="/extracted_media/image43.png" alt="Stridebreaker" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image43.png')} alt="Stridebreaker" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Stridebreaker &gt; AA / Stridebreaker &gt; Q para aplicar lentidão e dano imediato</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-sm text-[#f0e6d2]">Profane Hydra</h5>
-                  <img src="/extracted_media/image40.png" alt="Profane Hydra" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image40.png')} alt="Profane Hydra" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Profane &gt; AA / Profane &gt; Q para explosão letal</p>
                 </div>
               </div>
@@ -196,17 +197,17 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Buffering contra CC</h5>
-                  <img src="/extracted_media/image21.png" alt="Q Buffering" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image21.png')} alt="Q Buffering" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Spam de clique direito ou W durante animação do Q para garantir dano mesmo ao ser atordoado.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Q Flash</h5>
-                  <img src="/extracted_media/image26.png" alt="Q Flash" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image26.png')} alt="Q Flash" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Q &gt; Flash aplica dano antes do flash; Flash &gt; Q aplica após o flash para reposicionamento.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Cancelamento com AA</h5>
-                  <img src="/extracted_media/image30.png" alt="Q Cancels" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image30.png')} alt="Q Cancels" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">AA &gt; Q &gt; W ou E &gt; Q &gt; AA para conexões instantâneas.</p>
                 </div>
               </div>
@@ -236,17 +237,17 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Interações de Runas</h5>
-                  <img src="/extracted_media/image23.png" alt="W Runes" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image23.png')} alt="W Runes" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">W ativa PTA instantaneamente com 3 acertos quando fortalecido (50+ de fúria) e acumula Conquistador em segundos.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">On-Hit e Buffering</h5>
-                  <img src="/extracted_media/image33.png" alt="W On Hit" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image33.png')} alt="W On Hit" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">W aplica todos os efeitos de contato (BoTRK, cutelo) em cada um dos 2 ou 3 acertos.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">W &gt; R Double Cast</h5>
-                  <img src="/extracted_media/image24.png" alt="W Double Cast" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image24.png')} alt="W Double Cast" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Pressione R imediatamente após o W para cancelar o auto-atordoamento do Renekton, mantendo o inimigo preso!</p>
                 </div>
               </div>
@@ -276,12 +277,12 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">E Flash</h5>
-                  <img src="/extracted_media/image36.png" alt="E Flash" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image36.png')} alt="E Flash" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">A animação do E conclui antes do flash. Use Flash &gt; E para cobrir distâncias astronômicas de surpresa.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Remoção do Delay de E1 para E2</h5>
-                  <img src="/extracted_media/image28.png" alt="E Delay Removal" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image28.png')} alt="E Delay Removal" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Técnicas de clique para diminuir o atraso entre a primeira e a segunda investida do E.</p>
                 </div>
               </div>
@@ -311,12 +312,12 @@ export const CombosTab: React.FC<CombosTabProps> = ({ mechanics }) => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">Aumento de Alcance (+25 Range)</h5>
-                  <img src="/extracted_media/image32.png" alt="R Range" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image32.png')} alt="R Range" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Dominus aumenta o alcance do auto-ataque e do Q em 25 unidades, facilitando acertos na borda.</p>
                 </div>
                 <div className="bg-[#0d1520] border border-[#223347] rounded-xl p-3 space-y-2">
                   <h5 className="font-bold text-xs text-[#c8aa6e]">R &gt; AA e R &gt; Q Cancels</h5>
-                  <img src="/extracted_media/image35.png" alt="R Cancels" className="w-full rounded-lg" />
+                  <img src={getAssetUrl('/extracted_media/image35.png')} alt="R Cancels" className="w-full rounded-lg" />
                   <p className="text-xs text-[#8a99ad]">Pressione clique direito ou Q logo após conjurar R para cortar a animação de transformação.</p>
                 </div>
               </div>

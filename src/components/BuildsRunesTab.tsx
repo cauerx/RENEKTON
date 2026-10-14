@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { RunesData, ItemsData, SummonersData, AbilitiesData } from '../types/guide';
+import { getAssetUrl } from '../utils/assets';
 import { Sparkles, Swords, Flame, Zap, Shield } from 'lucide-react';
 
 interface BuildsRunesTabProps {
@@ -118,10 +119,10 @@ export const BuildsRunesTab: React.FC<BuildsRunesTabProps> = ({
 
                   <div className="p-3 bg-[#080d14] flex items-center justify-center">
                     <img
-                      src={setup.image}
+                      src={getAssetUrl(setup.image)}
                       alt={setup.title}
                       className="max-h-64 w-auto object-contain rounded-lg hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-                      onClick={() => window.open(setup.image, '_blank')}
+                      onClick={() => window.open(getAssetUrl(setup.image), '_blank')}
                     />
                   </div>
                 </div>
@@ -163,10 +164,10 @@ export const BuildsRunesTab: React.FC<BuildsRunesTabProps> = ({
 
                   <div className="rounded-xl overflow-hidden border border-[#1a293a] bg-[#070b10] p-2">
                     <img
-                      src={build.image}
+                      src={getAssetUrl(build.image)}
                       alt={build.title}
                       className="w-full h-auto object-contain rounded-lg hover:scale-105 transition-transform duration-300 cursor-zoom-in"
-                      onClick={() => window.open(build.image, '_blank')}
+                      onClick={() => window.open(getAssetUrl(build.image), '_blank')}
                     />
                   </div>
                 </div>

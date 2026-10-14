@@ -1,4 +1,4 @@
-import React from 'react';
+import { getAssetUrl } from '../utils/assets';
 import { Shield, Zap, Flame, Sparkles, BookOpen, ExternalLink } from 'lucide-react';
 
 export type TabType = 'matchups' | 'combos' | 'fury' | 'builds' | 'skins';
@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab, totalMa
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   onError={(e) => {
                     // Fallback to local image
-                    (e.target as HTMLImageElement).src = '/extracted_media/image20.jpg';
+                    (e.target as HTMLImageElement).src = getAssetUrl('/extracted_media/image20.jpg');
                   }}
                 />
               </div>

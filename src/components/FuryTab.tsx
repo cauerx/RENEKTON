@@ -1,5 +1,6 @@
 import React from 'react';
 import type { FuryData } from '../types/guide';
+import { getAssetUrl } from '../utils/assets';
 import { Flame, Activity, Zap, CheckCircle2 } from 'lucide-react';
 
 interface FuryTabProps {
@@ -89,10 +90,10 @@ export const FuryTab: React.FC<FuryTabProps> = ({ fury }) => {
             <span className="text-[10px] text-[#788ca3]">Clique na imagem para ampliar</span>
           </div>
           <img
-            src="/extracted_media/image22.png"
+            src={getAssetUrl('/extracted_media/image22.png')}
             alt="Fury Mechanics Diagram"
             className="w-full h-auto object-contain cursor-zoom-in"
-            onClick={() => window.open('/extracted_media/image22.png', '_blank')}
+            onClick={() => window.open(getAssetUrl('/extracted_media/image22.png'), '_blank')}
           />
         </div>
       </div>

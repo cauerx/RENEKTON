@@ -1,5 +1,6 @@
 import React from 'react';
 import type { SkinTierListData, FaqItem, IntroData } from '../types/guide';
+import { getAssetUrl } from '../utils/assets';
 import { Crown, HelpCircle, ExternalLink, Heart } from 'lucide-react';
 
 interface SkinsFaqTabProps {
@@ -31,10 +32,10 @@ export const SkinsFaqTab: React.FC<SkinsFaqTabProps> = ({ skins, faq, intro }) =
             <span className="text-[10px] text-[#768aa2]">Clique para ampliar</span>
           </div>
           <img
-            src={skins.image}
+            src={getAssetUrl(skins.image)}
             alt="Renekton Skin Tier List"
             className="w-full h-auto object-contain cursor-zoom-in"
-            onClick={() => window.open(skins.image, '_blank')}
+            onClick={() => window.open(getAssetUrl(skins.image), '_blank')}
           />
         </div>
       </div>
@@ -73,7 +74,7 @@ export const SkinsFaqTab: React.FC<SkinsFaqTabProps> = ({ skins, faq, intro }) =
           <div className="flex items-center gap-4">
             <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-[#c8aa6e] bg-[#080d14] shadow-lg">
               <img
-                src="/extracted_media/image20.jpg"
+                src={getAssetUrl('/extracted_media/image20.jpg')}
                 alt="Godrekton"
                 className="w-full h-full object-cover"
                 onError={(e) => {
